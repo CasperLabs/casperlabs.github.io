@@ -30,7 +30,7 @@ Paying too much attention to TPS blinds us to the reason we have scaling problem
 
 As a system becomes more distributed, its dependence on communication between nodes increases drastically. *Consensus bandwidth*, defined as the maximum number of bits the network can reach consensus on, is the major bottleneck that prevents it from scaling. Then comes storage, because it requires an evergrowing continual allocation. Computing power is the least criticial, because it is consumed instantaneously and doesn't continue to occupy hardware.
 
-![](https://i.imgur.com/dJYpCbW.png)
+![](/assets/img/tps-considered-harmful/fig1.svg)
 
 All Proof of Work blockchains eventually hit the bandwidth bottleneck---blocks become full, transaction fees skyrocket. Let's look at the bandwidth of Bitcoin: 1 MB every 10 minutes yields 13.3 kbps. Clearly, this number is much lower than the speeds we are used to when connecting to the Internet. We must be able to afford at least the 56k of dial-up modems, right?
 
@@ -48,7 +48,7 @@ $$F(t) = \int_0^t f(s)\, ds$$
 
 is the cumulative distribution function (CDF) of the rate at which a block is propagated through the network. These looked like the following back in 2012:
 
-![](https://i.imgur.com/rFJFFoQ.png)
+![](/assets/img/tps-considered-harmful/fig2.png)
 
 The graph on the left is the PDF, and the one on the right shows the percentage of the nodes that haven't received a block after a certain amount of time. The important thing to understand is that increasing block size expands the PDF to the right, increasing the value of the integral term in the exponent, eventually increasing the forking rate. Decreasing block time does the same by increasing $P_b$. The formulas yield a value close to 1.69%, the original forking rate in 2012. That means every ~17 in 1000 blocks were orphaned.
 
