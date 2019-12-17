@@ -6,6 +6,7 @@ description: ""
 # baseurl: ""
 github_username:  casperlabs
 
+theme: jekyll-theme-minimal
 # Build settings
 markdown: kramdown
 permalink: pretty
