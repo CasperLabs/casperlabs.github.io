@@ -1,0 +1,22 @@
+# Site settings
+title: Casperlabs Blog
+# email:
+description: ""
+# url: ""
+# baseurl: ""
+github_username:  casperlabs
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+
+# configure kramdown
+kramdown:
+  parse_block_html: true
+
+
